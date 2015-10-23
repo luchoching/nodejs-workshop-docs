@@ -38,25 +38,28 @@ If the operation was completed successfully, then the first argument will be nul
 
 ### 常見操作
 
+查詢目錄,  檢查檔案是否存在, 讀取/寫入檔案, 新增/刪除檔案: 
+
 http://www.devdungeon.com/content/file-manipulation-nodejs
-
-查詢目錄
-
-檢查檔案是否存在
-
-讀取檔案
-
-寫入檔案
-
-新增檔案
-
-刪除檔案
 
 ReadStream, WriteStream
 
 ## Async flow 
 
-誰先執行? 
+結果為?? 
+
+``` js
+var fs = require('fs');
+
+console.log('start reading dir...');
+
+fs.readdir('./', function(err, files){
+  if (err) console.error(err);
+  console.log(files);
+});
+
+console.log('end reading dir');
+```
 
 要怎麼控制執行的順序呢? 
 
@@ -64,7 +67,7 @@ ReadStream, WriteStream
 
 慣例 `err`是callback的第一個參數: 
 
-```
+``` js
 var fs = require('fs');
 
 fs.unlink('./test.txt', function(err){
@@ -75,7 +78,7 @@ fs.unlink('./test.txt', function(err){
 
 throw error or console.error it: 
 
-```
+``` 
 $ node del-file
 /Users/luchoching/code/nodejs-test/del-file.js:4
   if (err) throw err;
@@ -87,7 +90,7 @@ Error: ENOENT: no such file or directory, unlink './test.txt'
 
 `ENOENT`: Error NO ENTry
 
---> 先check檔案是否存在 --> 再刪除檔案
+練習: 先check檔案是否存在 --> 刪除檔案
 
 ## Links 
 

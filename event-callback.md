@@ -8,7 +8,7 @@ https://nodejs.org/en/about/
 
 使用Node.js API,  `hello-http-server.js`:
 
-```
+``` js
 var http = require('http');
 
 http.createServer(function(req, res){

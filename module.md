@@ -10,7 +10,7 @@ A module encapsulates related code into a single unit of code. When creating a m
 
 撰寫一個module : `say.js`
 
-```
+``` js
 var hello = function(){
   return 'Hello';
 }
@@ -28,7 +28,7 @@ Modules make it possible to include other Javascript files into your application
 
 引用一個module: `main.js`
 
-```
+``` js
 var say = require('./say');
 
 console.log(say.hello());
@@ -53,7 +53,7 @@ console.log(say.hello());
 
 config.js: 
 
-```
+``` js
 var config = {
   foo: 'bar'
 };
@@ -63,7 +63,7 @@ module.exports = config;
 
 server.js:
 
-```
+``` js
 var config = require('./config'); 
 console.log(config.foo);
 ```
@@ -96,7 +96,7 @@ These objects are available in all modules.
 
 `process.env` , `process.argv`:
 
-```
+``` js
 // print process.argv
 process.argv.forEach(function(val, index, array) {
   console.log(index + ': ' + val);
@@ -107,7 +107,7 @@ process.argv.forEach(function(val, index, array) {
 
 The filename of the code being executed. 
 
-```
+``` js
 console.log(__filename);
 // /Users/mjr/example.js
 ```
@@ -116,7 +116,7 @@ console.log(__filename);
 
 The name of the directory that the currently executing script resides in.
 
-```
+``` js
 console.log(__dirname);
 // /Users/mjr
 ```
