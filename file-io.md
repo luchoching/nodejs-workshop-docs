@@ -1,4 +1,4 @@
-# Path, File
+# File I/O
 
 ## Path 
 
@@ -30,21 +30,51 @@ If the operation was completed successfully, then the first argument will be nul
 
 **Async & Sync method** : When using the synchronous form any exceptions are immediately thrown. You can use try/catch to handle exceptions or allow them to bubble up.
 
-### 刪除檔案(Async version)
+Node.js file i/o API 都提供 Sync/Async版本
 
-### 刪除檔案(Sync version)
+用Sync mathod好? 還是Async好? 
 
-### 順序性? :)
+### Async例子: 刪除檔案
 
-### 常見操作
+``` js
+var fs = require('fs');
 
-查詢目錄,  檢查檔案是否存在, 讀取/寫入檔案, 新增/刪除檔案: 
+fs.unlink('/tmp/hello', function (err) {
+  if (err) throw err;
+  console.log('successfully deleted /tmp/hello');
+});
+```
 
-http://www.devdungeon.com/content/file-manipulation-nodejs
+### Node.js Error Handling
 
-ReadStream, WriteStream
+慣例 `err`是callback的第一個參數: 
 
-## Async flow 
+throw error or console.error it: 
+
+``` 
+$ node del-file
+/Users/luchoching/code/nodejs-test/del-file.js:4
+  if (err) throw err;
+           ^
+
+Error: ENOENT: no such file or directory, unlink './test.txt'
+    at Error (native)
+```
+
+`ENOENT`: Error NO ENTry
+
+### Sync例子: 刪除檔案
+
+``` js
+var fs = require('fs');
+
+fs.unlinkSync('/tmp/hello');
+console.log('successfully deleted /tmp/hello');
+```
+
+**With the asynchronous methods there is no guaranteed ordering.**
+
+### Async flow 
 
 結果為?? 
 
@@ -63,34 +93,19 @@ console.log('end reading dir');
 
 要怎麼控制執行的順序呢? 
 
-## Node.js Error Handling
+### 常見操作
 
-慣例 `err`是callback的第一個參數: 
+查詢目錄,  檢查檔案是否存在, 讀取/寫入檔案, 新增/刪除檔案: 
 
-``` js
-var fs = require('fs');
+http://www.devdungeon.com/content/file-manipulation-nodejs
 
-fs.unlink('./test.txt', function(err){
-  if (err) throw err;
-  console.log('Del sucessful!');
-});
-```
-
-throw error or console.error it: 
-
-``` 
-$ node del-file
-/Users/luchoching/code/nodejs-test/del-file.js:4
-  if (err) throw err;
-           ^
-
-Error: ENOENT: no such file or directory, unlink './test.txt'
-    at Error (native)
-```
-
-`ENOENT`: Error NO ENTry
+ReadStream, WriteStream
 
 練習: 先check檔案是否存在 --> 刪除檔案
+
+
+
+
 
 ## Links 
 
