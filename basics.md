@@ -51,6 +51,9 @@ print hello world.
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
+[aribnb ES5 style guide](https://github.com/airbnb/javascript/tree/master/es5)
+
+[airbnb ES6 style guide](https://github.com/airbnb/javascript)
 
 
 

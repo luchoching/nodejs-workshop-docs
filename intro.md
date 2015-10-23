@@ -21,17 +21,15 @@ This means it can handle concurrent operations without multiple threads of execu
 
 Nodejs is not designed for data processing. It's good for tasks such as getting data from database, doing simple transform and send user response.  
 
-So I would like to have nodejs as a Restful API server and talk to Scala, which runs complex and long tasks.
-
 ## JavaScript, ECMAScript 
 
 [wiki](https://en.wikipedia.org/wiki/ECMAScript):
 
-ECMAScript is a trademarked[1] scripting language specification standardized by Ecma International in ECMA-262 and ISO/IEC 16262. Well-known implementations of the language, such as JavaScript, JScript and ActionScript are widely used for client-side scripting on the Web.
+>ECMAScript is a trademarked[1] scripting language specification standardized by Ecma International in ECMA-262 and ISO/IEC 16262. Well-known implementations of the language, such as JavaScript, JScript and ActionScript are widely used for client-side scripting on the Web.
 
 [stackoverflow](http://stackoverflow.com/questions/912479/what-is-the-difference-between-javascript-and-ecmascript): 
 
-JavaScript = ECMAScript + DOM API
+>JavaScript = ECMAScript + DOM API
 
 ECMAScript® Language Specification defines all logic for creating and editing objects, arrays, numbers, etc...
 
@@ -54,4 +52,6 @@ node -p process.versions.v8
 
 [Babel](https://babeljs.io/) is a JavaScript compiler.
 
+## Links 
 
+http://www.slideshare.net/jguerrero99/seattle-strongloop-nodejs-workshop

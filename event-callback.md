@@ -1,4 +1,6 @@
-# 理解 Node.js 開發手法
+# Event-driven
+
+來玩Node.js標準API, 並理解其開發方式特色 
 
 ## HTTP server 
 

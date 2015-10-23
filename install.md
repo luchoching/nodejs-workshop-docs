@@ -48,3 +48,7 @@ nvm install node --reinstall-packages-from=node
 
 http://www.cli-nerd.com/2015/09/09/7-reasons-to-upgrade-to-node-v4-now.html
 
+```
+node --v8-options | grep "in progress"
+node -p process.versions.v8
+```

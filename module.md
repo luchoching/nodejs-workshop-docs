@@ -64,7 +64,7 @@ module.exports = config;
 server.js:
 
 ```
-var config = require('./config');
+var config = require('./config'); 
 console.log(config.foo);
 ```
 
@@ -80,8 +80,64 @@ Core modules are always preferentially loaded if their identifier is passed to `
 
 For instance, `require('http')` will always return the built in HTTP module, even if there is a file by that name.
 
-## Links
+## Global Objects 
 
-https://www.airpair.com/javascript/node-js-tutorial#1-introduction
+https://nodejs.org/docs/latest/api/globals.html  
 
-node_modules
+These objects are available in all modules.
+
+### require
+
+### Console object
+
+`console.log`, `console.error`(prints to stderr)
+
+### Process object 
+
+`process.env` , `process.argv`:
+
+```
+// print process.argv
+process.argv.forEach(function(val, index, array) {
+  console.log(index + ': ' + val);
+});
+```
+
+### __filename
+
+The filename of the code being executed. 
+
+```
+console.log(__filename);
+// /Users/mjr/example.js
+```
+
+### __dirname
+
+The name of the directory that the currently executing script resides in.
+
+```
+console.log(__dirname);
+// /Users/mjr
+```
+
+### Buffer 
+
+https://nodejs.org/api/buffer.html 
+
+Pure JavaScript is Unicode friendly but not nice to binary data. 
+
+When dealing with TCP streams or the file system, it's necessary to handle octet streams.
+
+Node.js has several strategies for manipulating, creating, and consuming octet streams.
+
+Raw data is stored in instances of the Buffer class. A Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap. A Buffer cannot be resized.
+
+**值得專文討論**
+
+### setTimeout(cb, ms) , setInterval(cb, ms)
+
+ms設成0 ? --> 優先執行? 
+
+**值得專文討論**
+

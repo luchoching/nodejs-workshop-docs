@@ -4,6 +4,8 @@ https://docs.npmjs.com/
 
 npm is the package manager used to distribute Node modules.
 
+[npm數量全世界最多](http://www.modulecounts.com/)
+
 `npm --help`
 
 `npm init`
@@ -12,9 +14,9 @@ npm is the package manager used to distribute Node modules.
 
 `package.json`
 
-http://www.copterlabs.com/blog/json-what-it-is-how-it-works-how-to-use-it/
+[JSON](http://www.copterlabs.com/blog/json-what-it-is-how-it-works-how-to-use-it/):
 
-JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner. In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.
+>JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner. In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.
 
 `npm search packagename`
 
@@ -30,11 +32,11 @@ JSON is short for JavaScript Object Notation, and is a way to store information 
 
 [Top 100 most dependent upon packages](https://github.com/anvaka/npmrank/blob/master/sample/dependencies.md) 
 
-[npm數量全世界最多](http://www.modulecounts.com/)
-
 ### library update
 
 注意專案要更新library是大事, 要小心
+
+[npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
 ### npm scripts
 
