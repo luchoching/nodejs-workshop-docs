@@ -20,5 +20,11 @@
 
 [Database](db.md)
 
+[ES6](es6.md)
+
+[Testing](testing.md)
+
+[Misc Libs](libs.md)
+
 [more](more.md)
 

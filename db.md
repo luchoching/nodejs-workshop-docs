@@ -16,6 +16,10 @@ https://www.mongodb.org/
 
 撰寫 expressjs mongodb middleware
 
+## Couchbase
+
+http://www.couchbase.com/
+
 ## redis 
 
 http://redis.io/topics/data-types-intro
@@ -42,6 +46,10 @@ http://www.squaremobius.net/rabbit.js/
 
 https://www.cloudamqp.com/docs/nodejs.html
 
+## Kafka 
 
+http://kafka.apache.org/
+
+https://zookeeper.apache.org/
 
 
